@@ -40,7 +40,7 @@ The main features include:
 ## 🏄🏻‍♀️ How to Use
 1. Clone the repository:
    ```bash
-   git clone [<your-repo-url>](https://github.com/Emboiss13/Mapty.git)
+   git clone https://github.com/Emboiss13/Mapty.git
    ```
 2. Open index.html in your browser.
 
