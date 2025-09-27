@@ -40,7 +40,7 @@ The main features include:
 ## 🏄🏻‍♀️ How to Use
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone [<your-repo-url>](https://github.com/Emboiss13/Mapty.git)
    ```
 2. Open index.html in your browser.
 
@@ -48,4 +48,5 @@ The main features include:
 
 4. Start logging workouts directly on the map!
 
-## 👨‍🏫 Lecturer This project is part of the course taught by Jonas Schmedtmann on [Udemy](udemy.com/course/the-complete-javascript-course/learn/).
+## 👨‍🏫 Lecturer 
+This project is part of the course taught by Jonas Schmedtmann on [Udemy](udemy.com/course/the-complete-javascript-course/learn/).
