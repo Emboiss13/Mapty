@@ -1,6 +1,7 @@
 # Mapty
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dbb103c3-1076-4ef9-ba98-c5cb0ff28c05" />
+<img width="1861" height="926" alt="image" src="https://github.com/user-attachments/assets/fb28873d-b3fc-4eac-b61d-f5abfbec3bff" />
+
 
 ## 📌 Project Overview
 **Mapty** is a workout logging application that combines geolocation, interactive maps, and local storage. The app allows users to track their **running** and **cycling** workouts directly on a map.
@@ -34,7 +35,10 @@ The main features include:
 - Built a workout logging application featuring a map interface.  
 - Integrated **browser geolocation API** to obtain user position.  
 - Implemented **persistent data storage** using Local Storage.  
-- Demonstrated **dynamic UI updates** with map markers and workout lists.  
+- Demonstrated **dynamic UI updates** with map markers and workout lists.
+
+## 📐 Architecture
+<img width="1917" height="948" alt="image" src="https://github.com/user-attachments/assets/1597a17d-f1e6-4aa5-8d75-465507ea089d" />
 
 
 ## 🏄🏻‍♀️ How to Use
