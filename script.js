@@ -28,14 +28,30 @@ if (navigator.geolocation) {
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
+            
+            //-------------------------------
+            //Displaying a Map Marker
+            //-------------------------------
+            //We are adding an event listener to the map object
+            map.on('click', function (mapEvent) { 
+                const { lat, lng } = mapEvent.latlng;
 
-            L.marker(coords).addTo(map)
-                .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+                L.marker([lat, lng]).addTo(map)
+                .bindPopup('Workout')
                 .openPopup();
+            })
+                
+
+
         }
     ),
     function () {
         alert('Could not get your position');
     }
 }
+
+
+
+
+
     
