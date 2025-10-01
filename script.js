@@ -18,41 +18,57 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+
+//-------------------------------
+//Refactoring our code to use classes
+//-------------------------------
+
+class App {
+    constructor() { };
+
+    _getPosition() { 
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                this._loadMap, function () {
+                alert('Could not get your position');
+            })
+        };
+    };
+
+    _loadMap(position) { 
+        const { latitude } = position.coords;
+        const { longitude } = position.coords;
+        const coords = [latitude, longitude];
+        
+        map = L.map('map').setView(coords, 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        //-------------------------------
+        //Displaying a Map Marker
+        //-------------------------------
+        //We are adding an event listener to the map object
+        map.on('click', function (mapE) { 
+            mapEvent = mapE;
+            //Display form
+            form.classList.remove('hidden');
+            inputDistance.focus();
+        })
+
+    };
+
+    _showForm() { };
+    _toggleElevationField() { };
+    _newWorkout() { };
+}
+
 //-------------------------------
 //Requesting Geolocation API
 //-------------------------------
 
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-        function (position) {
-            const { latitude } = position.coords;
-            const { longitude } = position.coords;
 
-            const coords = [latitude, longitude];
-            
-            map = L.map('map').setView(coords, 13);
-
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            
-            //-------------------------------
-            //Displaying a Map Marker
-            //-------------------------------
-            //We are adding an event listener to the map object
-            map.on('click', function (mapE) { 
-                mapEvent = mapE;
-                //Display form
-                form.classList.remove('hidden');
-                inputDistance.focus();
-            })
-
-        }
-    ),
-    function () {
-        alert('Could not get your position');
-    }
-}
 
 form.addEventListener('submit', function (e) {
 
