@@ -16,6 +16,59 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+//-------------------------------
+// Managing workout data
+//-------------------------------
+
+class Workout {
+
+    date = new Date();
+
+    //Usually we would generate id using a library but for simplicity we will use this method
+    id = (Date.now() + Math.random().toString().slice(2, 6) + '').slice(-10);
+
+    constructor(coords, distance, duration) {
+        this.coords = coords; // [lat, lng]
+        this.distance = distance; // in km
+        this.duration = duration; // in min
+    }
+}
+
+class Running extends Workout { 
+    constructor(coords, distance, duration, cadence) {
+        super(coords, distance, duration); //initializing the parent class or this keyword
+        this.cadence = cadence;
+        this.calcPace(); //We call the method here to set the pace property when a new object is created
+    }
+
+    calcPace() { 
+        //min/km
+        this.pace = this.duration / this.distance;
+        return this.pace;
+    }
+};
+
+class Cycling extends Workout { 
+    constructor(coords, distance, duration, elevationGain) {
+        super(coords, distance, duration);
+        this.elevationGain = elevationGain;
+        this.calcSpeed();
+    }
+
+    calcSpeed() {
+        // km/h
+        this.speed = this.distance / (this.duration / 60); // convert min to hours (dividing by 60)
+        return this.speed;
+    }
+};
+
+const run1 = new Running([39, -12], 5.2, 24, 178);
+const cycling1 = new Cycling([39, -12], 27, 95, 523);
+console.log(run1, cycling1);
+
+//-------------------------------
+// App Architecture
+//-------------------------------
 
 class App {
     #map;
