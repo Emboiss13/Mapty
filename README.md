@@ -3,7 +3,7 @@
 <img width="1861" height="926" alt="image" src="https://github.com/user-attachments/assets/fb28873d-b3fc-4eac-b61d-f5abfbec3bff" />
 
 
-## 📌 Project Overview
+## Project Overview
 **Mapty** is a workout logging application that combines geolocation, interactive maps, and local storage. The app allows users to track their **running** and **cycling** workouts directly on a map.
 
 The main features include:
@@ -14,7 +14,7 @@ The main features include:
 - Persistent storage of workouts in the browser (data remains after reload).
 
 
-## ⚙️ Features
+## Features
 - **Geolocation**: Automatically centers the map based on the user’s location.
 - **Workout Logging**: Add details such as distance, duration, cadence (for running), or elevation gain (for cycling).
 - **Dynamic Map Pins**: Each workout creates a pin on the map with a pop-up summary.
@@ -22,7 +22,7 @@ The main features include:
 - **Persistent Data**: Workouts are saved to browser storage and restored when the page is reloaded.
 
 
-## 👩🏻‍💻 Tech Stack
+## Tech Stack
 - **JavaScript (ES6+)**
 - **HTML5 / CSS3**
 - **Leaflet.js** (for maps)
@@ -31,17 +31,17 @@ The main features include:
   - Local Storage API
 
 
-## ⭐ Key Takeaways
+## Key Takeaways
 - Built a workout logging application featuring a map interface.  
 - Integrated **browser geolocation API** to obtain user position.  
 - Implemented **persistent data storage** using Local Storage.  
 - Demonstrated **dynamic UI updates** with map markers and workout lists.
 
-## 📐 Architecture
+## Architecture
 <img width="1917" height="948" alt="image" src="https://github.com/user-attachments/assets/1597a17d-f1e6-4aa5-8d75-465507ea089d" />
 
 
-## 🏄🏻‍♀️ How to Use
+## How to Use
 1. Clone the repository:
    ```bash
    git clone https://github.com/Emboiss13/Mapty.git
@@ -52,5 +52,5 @@ The main features include:
 
 4. Start logging workouts directly on the map!
 
-## 👨‍🏫 Lecturer 
+## Lecturer 
 This project is part of the course taught by Jonas Schmedtmann on [Udemy](udemy.com/course/the-complete-javascript-course/learn/).
