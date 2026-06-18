@@ -53,4 +53,4 @@ The main features include:
 4. Start logging workouts directly on the map!
 
 ## Lecturer 
-This project is part of the course taught by Jonas Schmedtmann on [Udemy](udemy.com/course/the-complete-javascript-course/learn/).
+This project is part of the course I took by Jonas Schmedtmann on [Udemy](udemy.com/course/the-complete-javascript-course/learn/).
